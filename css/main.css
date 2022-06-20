@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -47,13 +51,20 @@ body{
     text-align: center;
 }
 
+section{
+    scroll-margin-top: 80px;  /* odstęp od nawigacji po scrolowaniu*/
+}
+
 /* nawigacja */
 
 nav{
+    position: sticky;
+    top: 0;
     height: 60px;
     line-height: 60px;
     background-color: #ddd;
     text-align: center;
+    z-index: 10;
 }
 
 
@@ -90,6 +101,10 @@ main{
 
 /* o nas */
 
+.about-us{
+    margin-top: 60px;
+}
+
 .about-us-info{
     margin-bottom: 10px;
     padding: 0 20px;
@@ -109,8 +124,13 @@ main{
     background-position: center;
 }
 
+.product:hover h3{
+    transform: scale(1.6);
+}
+
 .product h3{
     text-transform: uppercase;
+    transition: transform .3s;
 }
 
 .first-product{
@@ -127,6 +147,26 @@ main{
 
 .four-product{
     background-image: url(../img/domowebiurko-small.jpg);
+}
+
+/* kontakt */
+
+.contact{
+    text-align: center;
+}
+
+.contact h3{
+    margin: 20px 0 5px;
+    text-transform: uppercase;
+}
+
+/* footer */
+
+footer{
+    margin-top: 30px;
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #ddd;
 }
 
 @media (min-width: 768px){
@@ -170,7 +210,7 @@ main{
 
 @media (min-width: 992px){
     .products-box{
-        font-size: 0;
+        font-size: 0; /* usuwamy odstępy obok siebie w obrazkach za pomocą display inline-block*/
     }
 
     .product{
