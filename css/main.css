@@ -41,6 +41,12 @@ body{
     color: #09f;
 }
 
+.section-title{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 /* nawigacja */
 
 nav{
@@ -76,6 +82,52 @@ nav{
     background-position-y: bottom;
 }
 
+/* main */
+
+main{
+    margin-top: 60px 0;
+}
+
+/* o nas */
+
+.about-us-info{
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+/* produkty */
+
+.products{
+    margin: 60px auto;
+}
+
+
+.product{
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product h3{
+    text-transform: uppercase;
+}
+
+.first-product{
+    background-image: url(../img/dzieci-small.jpg);   
+}
+
+.second-product{
+    background-image: url(../img/klawiatura-small.jpg);
+}
+
+.third-product{
+    background-image: url(../img/kobieta-small.jpg);
+}
+
+.four-product{
+    background-image: url(../img/domowebiurko-small.jpg);
+}
 
 @media (min-width: 768px){
     .nav-items{
@@ -109,6 +161,21 @@ nav{
 
     .hero-text p{
         font-size: 18px;
+    }
+
+    .product h3{
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 992px){
+    .products-box{
+        font-size: 0;
+    }
+
+    .product{
+        display: inline-block;
+        width: 50%;
     }
 }
 
